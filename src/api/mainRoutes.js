@@ -100,7 +100,24 @@ router.post("/notes", checkNote, async (req, res) => {
 
 // put note at id (edit note)
 router.put("/notes/:id", checkNote, async (req, res) => {
-  // TODO: add logic
+  try {
+    // set edited note to the updated notes
+    const editedNote = await notes.update(req.params.id, req.body);
+
+    // make sure that edited note is not null
+    if (editedNote === 0) {
+      // if it is then send a 404
+      return res.status(404).json({ message: "the note does not exist" });
+    } else {
+      // otherwise send a 200 on success
+      return res.status(200).json(editedNote);
+    }
+  } catch (error) {
+    // catch any other error and send a 500
+    return res
+      .status(500)
+      .json({ message: "the note could not be edited", error: error.message });
+  }
 });
 
 // delete note at id
