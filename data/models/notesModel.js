@@ -1,6 +1,7 @@
 const db = require("../dbConfig");
 
 module.exports = {
+  // get method
   get: id => {
     let query = db("notes");
 
@@ -11,6 +12,7 @@ module.exports = {
     return query;
   },
 
+  // insert method
   insert: note => {
     return db("notes")
       .insert(note)
