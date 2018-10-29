@@ -8,3 +8,7 @@ const notes =
   router.get("/notes", async (req, res) => {
     // TODO: add logic
   });
+
+router.get("/notes/:id", async (req, res) => {
+  // TODO: add logic
+});
