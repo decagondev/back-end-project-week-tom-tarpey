@@ -19,7 +19,7 @@ module.exports = {
       .first();
   },
   // updateNoteOrder method
-  updateNoteOrdering: (id, updatedNoteOrder) => {
+  updateNoteOrder: (id, updatedNoteOrder) => {
     return db("users")
       .where("id", id)
       .update(updatedNoteOrder)
