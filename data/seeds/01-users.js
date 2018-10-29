@@ -7,7 +7,7 @@ exports.seed = function(knex, Promise) {
           id: 1,
           username: "tom",
           password: "password",
-          noteOrdering: "[3, 2, 1]"
+          noteOrder: "[3, 2, 1]"
         }
       ]);
     });
