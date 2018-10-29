@@ -17,5 +17,15 @@ module.exports = {
     return db("notes")
       .insert(note)
       .then(([id]) => module.exports.get(id));
+  },
+  // update method
+  update: (id, editedNote) => {
+    return (
+      db("notes")
+        .where("id", id)
+        .update(editedNote)
+        // get the id if there are more than 0 records otherwise get 0
+        .then(count => (count > 0 ? module.exports.get(id) : 0))
+    );
   }
 };
