@@ -9,3 +9,4 @@ const server = express();
 // use directives
 server.use(express.json());
 server.use(cors());
+server.use(morgan("dev"));
