@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:decagondev/back-end-project-week-tom-tarpey.git",
   "author": "decagondev <decagondevelopment@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
