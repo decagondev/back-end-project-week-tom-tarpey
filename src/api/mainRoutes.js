@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const session = require("express-session");
 
-const notes = null; // TODO: add linkup of helpers
+const notes = require("../../data/models/notesModel");
 const users = null; // TODO: add linkup of helpers
 
 // get notes
