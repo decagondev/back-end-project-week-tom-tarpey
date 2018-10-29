@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const session = require("express-session");
 
 const notes = require("../../data/models/notesModel");
-const users = null; // TODO: add linkup of helpers
+const users = require("../../data/models/usersModel");
 
 // get notes
 router.get("/notes", async (req, res) => {
