@@ -10,3 +10,6 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 server.use(morgan("dev"));
+
+// use routes
+server.use("/api", mainRoutes);
