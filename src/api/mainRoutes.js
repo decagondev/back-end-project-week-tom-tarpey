@@ -46,10 +46,7 @@ router.get("/notes", async (req, res) => {
 });
 
 // get note at id
-router.get("/notes/:id", async (req, res) => {});
-
-// post notes (create a new note)
-router.post("/notes", checkNote, async (req, res) => {
+router.get("/notes/:id", async (req, res) => {
   try {
     // get the note at the id provided in the params
     const note = await notes.get(req.params.id);
@@ -65,6 +62,37 @@ router.post("/notes", checkNote, async (req, res) => {
     // catch any other error and return a 500
     return res.status(500).json({
       message: "the note could not be retrieved",
+      error: error.message
+    });
+  }
+});
+
+// post notes (create a new note)
+router.post("/notes", checkNote, async (req, res) => {
+  try {
+    // create a new note based on the caller body
+    const newNote = await notes.insert(req.body);
+    // set an order string from the users table
+    const noteOrderString = await users.getNoteOrder(1);
+
+    // using json parse the order string array in to an array
+    const noteOrderArray = JSON.parse(noteOrderString.noteOrder);
+
+    // unshift the newNote.id from the order array
+    noteOrderArray.unshift(newNote.id);
+
+    // the updated note order from the note order array using json stringify
+    const updatedNoteOrder = { noteOrder: JSON.stringify(noteOrderArray) };
+
+    // update the note order in the users table
+    await users.updateNoteOrder(1, updatedNoteOrder);
+
+    // respond with a 201 on success
+    return res.status(201).json(newNote);
+  } catch (error) {
+    // catch any error and return a 500
+    return res.status(500).json({
+      message: "the note could not be added",
       error: error.message
     });
   }
