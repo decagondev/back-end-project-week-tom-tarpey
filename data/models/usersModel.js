@@ -10,5 +10,12 @@ module.exports = {
   // insert method
   insert: user => {
     return db("users").insert(user);
+  },
+  // getNoteOrder
+  getNoteOrder: id => {
+    return db("users")
+      .where("id", id)
+      .select("noteOrder")
+      .first();
   }
 };
