@@ -1,7 +1,7 @@
 {
   "name": "back-end-project-week-tom-tarpey",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "./src/server.js",
   "repository": "git@github.com:decagondev/back-end-project-week-tom-tarpey.git",
   "author": "decagondev <decagondevelopment@gmail.com>",
   "license": "MIT",
