@@ -11,11 +11,18 @@ module.exports = {
   insert: user => {
     return db("users").insert(user);
   },
-  // getNoteOrder
+  // getNoteOrder method
   getNoteOrder: id => {
     return db("users")
       .where("id", id)
       .select("noteOrder")
       .first();
+  },
+  // updateNoteOrder method
+  updateNoteOrdering: (id, updatedNoteOrder) => {
+    return db("users")
+      .where("id", id)
+      .update(updatedNoteOrder)
+      .then(count => (count > 0 ? module.exports.getNoteOrder(id) : 0));
   }
 };
