@@ -13,3 +13,8 @@ server.use(morgan("dev"));
 
 // use routes
 server.use("/api", mainRoutes);
+
+// listen on port 8800
+server.listen(8800, () =>
+  console.log("\n=== API listening on port 8800 ===\n")
+);
