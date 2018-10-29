@@ -27,5 +27,11 @@ module.exports = {
         // get the id if there are more than 0 records otherwise get 0
         .then(count => (count > 0 ? module.exports.get(id) : 0))
     );
+  },
+  // delete method
+  delete: id => {
+    return db("notes")
+      .where("id", id)
+      .del();
   }
 };
