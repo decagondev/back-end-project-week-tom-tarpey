@@ -6,6 +6,14 @@ const session = require("express-session");
 const notes = require("../../data/models/notesModel");
 const users = require("../../data/models/usersModel");
 
+// checkNote middleware
+const checkNote = (req, res, next) => {
+  if (!req.body.title || !req.body.content) {
+    return res.status(400).json({ message: "All fields must be completed." });
+  }
+  next();
+};
+
 // get notes
 router.get("/notes", async (req, res) => {
   try {
@@ -38,17 +46,32 @@ router.get("/notes", async (req, res) => {
 });
 
 // get note at id
-router.get("/notes/:id", async (req, res) => {
-  // TODO: add logic
-});
+router.get("/notes/:id", async (req, res) => {});
 
 // post notes (create a new note)
-router.post("/notes", noteCheck, async (req, res) => {
-  // TODO: add logic
+router.post("/notes", checkNote, async (req, res) => {
+  try {
+    // get the note at the id provided in the params
+    const note = await notes.get(req.params.id);
+    // test that it returns a note at that id and if not return a 404
+    if (!note) {
+      return res
+        .status(404)
+        .json({ message: `the note does not exist at id of ${req.params.id}` });
+    }
+    // otherwise return the 200 success
+    return res.status(200).json(note);
+  } catch (error) {
+    // catch any other error and return a 500
+    return res.status(500).json({
+      message: "the note could not be retrieved",
+      error: error.message
+    });
+  }
 });
 
 // put note at id (edit note)
-router.put("/notes/:id", noteCheck, async (req, res) => {
+router.put("/notes/:id", checkNote, async (req, res) => {
   // TODO: add logic
 });
 
@@ -56,3 +79,5 @@ router.put("/notes/:id", noteCheck, async (req, res) => {
 router.delete("/notes/:id", async (req, res) => {
   // TODO: add logic
 });
+
+module.exports = router;
