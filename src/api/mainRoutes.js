@@ -122,7 +122,38 @@ router.put("/notes/:id", checkNote, async (req, res) => {
 
 // delete note at id
 router.delete("/notes/:id", async (req, res) => {
-  // TODO: add logic
+  try {
+    // set deleted note to the notes.delete return
+    const deletedNote = await notes.delete(req.params.id);
+
+    // make sure deletedNorte is not null
+    if (deletedNote === 0) {
+      // otherwise return a 404
+      return res.status(404).json({ message: "the note does not exist" });
+    } else {
+      // get the order string from users
+      const noteOrderString = await users.getNoteOrder(1);
+      // set the order array by parsing the json and taking out note order array
+      let noteOrderArray = JSON.parse(noteOrderString.noteOrder);
+
+      // update to the new ordered array by doing a filter on the array
+      noteOrderArray = noteOrderArray.filter(id => id != req.params.id);
+
+      // set the updated note order to the new note order
+      const updatedNoteOrder = { noteOrder: JSON.stringify(noteOrderArray) };
+
+      // update the note order in the data
+      await users.updateNoteOrder(1, updatedNoteOrder);
+
+      // return the deleted note with a status of 200
+      return res.status(200).json(deletedNote);
+    }
+  } catch (error) {
+    // catch any other error and return a 500 with the eorrro message
+    return res
+      .status(500)
+      .json({ message: "the note could not be deleted", error: error.message });
+  }
 });
 
 module.exports = router;
