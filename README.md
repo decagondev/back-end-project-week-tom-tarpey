@@ -32,12 +32,18 @@ This will run the development server at `http://localhost:8800/` for usage see t
 
 ## USAGE
 
-CRUD OPERATION ENDPOINTS
+CRUD OPERATION ENDPOINTS - The endpoints link you to the functionality of the database and include
+
+- `C`reate - `POST` endpoint to do `INSERT` on the database
+- `R`ead - 'GET' endpoint to do `GET` on the database
+- `U`pdate - `PUT` endpoint to do `UPDATE` on the database
+- `D`elete - `DELETE` endpoint to do `DELETE` on the database
 
 ### CREATE
 
 create a note
 `POST -> /api/notes`
+
 ![alt text](./readme_files/POST.PNG "READ")
 
 ### READ
@@ -50,7 +56,7 @@ read a list of notes
 read a single note by id
 `GET -> /api/notes/:id`
 
-![alt text](./readme_files/GET.PNG "READ")
+![alt text](./readme_files/READ.PNG "READ")
 
 ### UPDATE
 
