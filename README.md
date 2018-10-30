@@ -46,6 +46,10 @@ To run the server locally you can fork and / clone it to your local machine. The
 - [npm](https://docs.npmjs.com/getting-started/installing-node)
 - [yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable) (optional but reccomended)
 
+FORK
+`to fork see the link below`
+[how to fork](https://help.github.com/articles/fork-a-repo/)
+
 CLONE
 `git clone git@github.com:decagondev/back-end-project-week-tom-tarpey.git`
 this will clone the repository locally to your machine.
