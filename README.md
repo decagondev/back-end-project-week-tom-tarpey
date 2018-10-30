@@ -10,11 +10,13 @@ CRUD OPERATION ENDPOINTS
 
 create a note
 `POST -> /api/notes`
+![alt text](./readme_files/POST.PNG "READ")
 
 ### READ
 
 read a list of notes
 `GET -> /api/notes`
+![alt text](./readme_files/GET.PNG "READ")
 
 read a single note by id
 `GET -> /api/notes/:id`
@@ -23,11 +25,13 @@ read a single note by id
 
 update a note by id
 `PUT -> /api/notes/:id`
+![alt text](./readme_files/PUT.PNG "READ")
 
 ### DELETE
 
 delete a note by id
 `DELETE -> /api/notes/:id`
+![alt text](./readme_files/DELETE.PNG "READ")
 
 ---
 
