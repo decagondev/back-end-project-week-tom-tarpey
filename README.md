@@ -32,10 +32,11 @@ This will run the development server at `http://localhost:8800/` for usage see t
 
 ## USAGE
 
-CRUD OPERATION ENDPOINTS - The endpoints link you to the functionality of the database and include
+**CRUD OPERATION ENDPOINTS**
+The endpoints link you to the functionality of the database and include:
 
 - `C`reate - `POST` endpoint to do `INSERT` on the database
-- `R`ead - 'GET' endpoint to do `GET` on the database
+- `R`ead - `GET` endpoint to do `GET` on the database
 - `U`pdate - `PUT` endpoint to do `UPDATE` on the database
 - `D`elete - `DELETE` endpoint to do `DELETE` on the database
 
