@@ -1,4 +1,4 @@
-# back-end-project-week-tom-tarpey
+# BACK END PROJECT WEEK - (TOM TARPEY)
 
 This is a REST CRUD API with endpoints to create, read, edit and update data in a database.
 
