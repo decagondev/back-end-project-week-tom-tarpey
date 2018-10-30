@@ -9,7 +9,7 @@ CRUD OPERATION ENDPOINTS
 ### CREATE
 
 create a note
-`PUSH -> /api/notes`
+`POST -> /api/notes`
 
 ### READ
 
