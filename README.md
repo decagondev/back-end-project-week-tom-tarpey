@@ -42,15 +42,23 @@ The endpoints link you to the functionality of the database and include:
 
 ### CREATE
 
-create a note
-`POST -> /api/notes`
+**create a note**
+
+URI: `http://<server_address:port>`
+
+ENDPOINT: `POST -> /api/notes`
+
+URL: `URI/ENDPOINT`
 
 ![alt text](./readme_files/POST.PNG "READ")
 
 ### READ
 
-read a list of notes
-`GET -> /api/notes`
+**read a list of notes**
+
+URI: `http://<server_address:port>`
+
+ENDPOINT: `GET -> /api/notes`
 
 ![alt text](./readme_files/GET.PNG "READ")
 
