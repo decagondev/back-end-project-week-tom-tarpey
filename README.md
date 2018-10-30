@@ -33,7 +33,7 @@ delete a note by id
 
 ## DATABASE
 
-The current database in use is a simple sqlite database but this API is extensible in that you can change the `./data/dbConfig.js` file to decide what type of database provider is used (see knex documentation for further information [insert link here])
+The current database in use is a simple sqlite database but this API is extensible in that you can change the `./data/dbConfig.js` file to decide what type of database provider is used (see [knex documentation](https://knexjs.org/) for further information)
 
 ---
 
@@ -41,10 +41,10 @@ The current database in use is a simple sqlite database but this API is extensib
 
 To run the server locally you can fork and / clone it to your local machine. There are some prerequisites for this however:
 
-- git
-- nodejs
-- npm
-- yarn (optional but reccomended)
+- [git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/)
+- [nodejs](https://nodejs.org/en/download/)
+- [npm](https://docs.npmjs.com/getting-started/installing-node)
+- [yarn](https://yarnpkg.com/lang/en/docs/install/#windows-stable) (optional but reccomended)
 
 CLONE
 `git clone git@github.com:decagondev/back-end-project-week-tom-tarpey.git`
