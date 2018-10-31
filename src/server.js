@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const mainRoutes = require("./api/mainRoutes");
+require("dotenv").config();
 
 // instantiate the express server
 const server = express();
@@ -14,7 +15,7 @@ server.use(morgan("dev"));
 // use routes
 server.use("/api", mainRoutes);
 
-// listen on port 8800
-server.listen(8800, () =>
-  console.log("\n=== API listening on port 8000 ===\n")
+const port = process.env.PORT || 8800;
+const instance = server.listen(port, () =>
+  console.log(`\n=== Server running on port: ${instance.address().port} ===\n`)
 );
