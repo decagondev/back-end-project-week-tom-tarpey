@@ -93,9 +93,11 @@ The current database in use is a simple sqlite database but this API is extensib
 
 here is the instructions for deploying the server to heroku
 
-- create a heroku account for free
-- download and install the heroku cli
+- create a [heroku](https://www.heroku.com/) account for free
+- download and install the [heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
 - create an app on heroku
 - follow the instructions to add your heroku remote
 - commit any changes
 - deploy `git push heroku`
+- migrate tables for data `heroku run knex migrate:latest`
+- seed data `heroku run knex seed:run`

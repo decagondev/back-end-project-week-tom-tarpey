@@ -14,6 +14,7 @@ module.exports = {
 
   // insert method
   insert: note => {
+    console.log(note);
     return db("notes")
       .insert(note)
       .then(([id]) => module.exports.get(id));
