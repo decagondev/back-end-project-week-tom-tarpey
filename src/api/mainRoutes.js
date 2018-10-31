@@ -67,6 +67,10 @@ router.get("/notes/:id", async (req, res) => {
   }
 });
 
+router.get("/", (req, res) => {
+  res.send(`Api running on port: ${port}`);
+});
+
 // post notes (create a new note)
 router.post("/notes", checkNote, async (req, res) => {
   try {
