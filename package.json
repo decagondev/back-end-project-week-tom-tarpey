@@ -6,6 +6,7 @@
   "author": "decagondev <decagondevelopment@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node",
     "dev": "nodemon",
     "test": "jest --watch --verbose",
     "deploy": "echo to be created might deploy to heroku or to one of my cloud vm's"
