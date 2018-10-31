@@ -14,7 +14,9 @@ server.use(morgan("dev"));
 
 // use routes
 server.use("/api", mainRoutes);
-
+server.get("/", (req, res) => {
+  res.send(`Api running on port: ${port}`);
+});
 const port = process.env.PORT || 8800;
 const instance = server.listen(port, () =>
   console.log(`\n=== Server running on port: ${instance.address().port} ===\n`)
