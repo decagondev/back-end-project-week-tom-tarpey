@@ -4,7 +4,9 @@ This is a REST CRUD API with endpoints to create, read, edit and update data in 
 
 ## RUNNING API
 
-To run the server locally you can fork and / clone it to your local machine. There are some prerequisites for this however:
+The API can be run in a few different ways the simplest to get it up and running in a fast fassion is to run the server locally. for this you can fork and / clone it to your local machine.
+
+**There are some prerequisites for this however:**
 
 - [git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/)
 - [nodejs](https://nodejs.org/en/download/)
@@ -26,7 +28,8 @@ this will move you in to the project directory then using yarn you will download
 
 RUN
 `yarn dev`
-This will run the development server at `http://localhost:8800/` for usage see the endpoints.
+This will run the development server at `http://localhost:8800/` using nodemon
+you can use `yarn start` to run it with node. **for usage see the endpoints**
 
 ---
 
