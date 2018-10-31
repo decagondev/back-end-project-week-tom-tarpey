@@ -76,6 +76,7 @@ router.post("/notes", checkNote, async (req, res) => {
   try {
     // create a new note based on the caller body
     const newNote = await notes.insert(req.body);
+    console.log(newNote);
     // set an order string from the users table
     const noteOrderString = await users.getNoteOrder(1);
 
