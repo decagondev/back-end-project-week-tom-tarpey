@@ -88,3 +88,14 @@ delete a note by id
 The current database in use is a simple sqlite database but this API is extensible in that you can change the `./data/dbConfig.js` file to decide what type of database provider is used (see [knex documentation](https://knexjs.org/) for further information)
 
 ---
+
+## DEPLOY
+
+here is the instructions for deploying the server to heroku
+
+- create a heroku account for free
+- download and install the heroku cli
+- create an app on heroku
+- follow the instructions to add your heroku remote
+- commit any changes
+- deploy `git push heroku`
