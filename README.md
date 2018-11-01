@@ -75,6 +75,15 @@ ENDPOINT: `GET -> /api/notes`
 **update a note by id**
 `PUT -> /api/notes/:id`
 
+this endpoint takes in a json object as the body of the request that must contain a title and a content :
+
+```
+{
+  "title": "some title",
+  "content": "some content"
+}
+```
+
 ![alt text](./readme_files/PUT.PNG "READ")
 
 ### DELETE
