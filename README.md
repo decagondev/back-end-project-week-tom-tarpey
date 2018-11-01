@@ -53,6 +53,16 @@ ENDPOINT: `POST -> /api/notes`
 
 URL: `URI/ENDPOINT`
 
+this endpoint takes in a json object as the body of the request that must contain a title, a content and a user_id :
+
+```
+{
+  "title": "some title",
+  "content": "some content",
+  "user_id": 1
+}
+```
+
 ![alt text](./readme_files/POST.PNG "READ")
 
 ### READ
