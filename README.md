@@ -4,7 +4,7 @@ This is a REST CRUD API with endpoints to create, read, edit and update data in 
 
 ## RUNNING API
 
-The API can be run in a few different ways the simplest to get it up and running in a fast fassion is to run the server locally. for this you can fork and / clone it to your local machine.
+The API can be run in a few different ways the simplest to get it up and running in a fast fasion is to run the server locally. for this you can fork and / clone it to your local machine.
 
 **There are some prerequisites for this however:**
 
@@ -65,21 +65,21 @@ ENDPOINT: `GET -> /api/notes`
 
 ![alt text](./readme_files/GET.PNG "READ")
 
-read a single note by id
+**read a single note by id**
 `GET -> /api/notes/:id`
 
 ![alt text](./readme_files/READ.PNG "READ")
 
 ### UPDATE
 
-update a note by id
+**update a note by id**
 `PUT -> /api/notes/:id`
 
 ![alt text](./readme_files/PUT.PNG "READ")
 
 ### DELETE
 
-delete a note by id
+**delete a note by id**
 `DELETE -> /api/notes/:id`
 
 ![alt text](./readme_files/DELETE.PNG "READ")
